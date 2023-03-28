@@ -1,57 +1,33 @@
-# count = 1
+# # 
+# First to Five
+# The following code increments number_a and number_b by either 0 or 1. loop is used so that the variables can be incremented more than once, however, break stops the loop after the first iteration. Use next to modify the code so that the loop iterates until either number_a or number_b equals 5. Print "5 was reached!" before breaking out of the loop.
+
+
+# number_a = 0
+# number_b = 0
 
 # loop do
-#   if count == 6 
-#     break
-#   elsif count % 2 == 0
-#     puts "#{count} is even"
-#   else
-#     puts "#{count} is odd"
-#   end  
-#   count += 1
+#   number_a += rand(2)
+#   number_b += rand(2)
+#   next unless number_a == 5 || number_b == 5
+
+#   puts '5 was reached!'
+#   break
 # end
 
-# Catch the Number 
-# Modify the following code so that the loop stops if number is equal to or between 0 and 10.
+# p number_a
+# p number_b
 
-# loop do
-#   number = rand(100)
-#   if number.between?(0, 10) 
-#     # puts "I'm stopping on #{number}"
-#     break
-#   else
-#     puts number
-#   end
-# end
+# Greeting
 
-# Write an if/else statement that executes some code if the process_the_loop variable is true and some other code when process_the_loop is false. Specifically:
+# Given the code below, use a while loop to print "Hello!" twice.
 
-# When process_the_loop is true, execute a loop that iterates exactly once and prints The loop was processed during that iteration.
-# When process_the_loop is false, just print The loop wasn't processed!.
-# Use the following code to initialize process_the_loop. It will randomly assign the variable to either true or false.
-
-# process_the_loop = [true, false].sample
-
-# if process_the_loop
-#   loop do 
-#      puts "The loop was processed"
-#     break
-#   end
-# else
-#   puts "The loop wasn't processed"
-# end
-
-# Get the Sum
-# The code below asks the user "What does 2 + 2 equal?" and uses #gets to retrieve the user's answer. Modify the code so "That's correct!" is printed and the loop stops when the user's answer equals 4. Print "Wrong answer. Try again!" if the user's answer doesn't equal 4.
-
-loop do
-  puts 'What does 2 + 2 equal?'
-  answer = gets.chomp.to_i
-  if answer == 4
-    puts "That's correct!"
-    break
-  else
-    puts "Wrong answer - try again!"
-  end
-  
+def greeting(number_of_greetings)
+  while number_of_greetings > 0
+  puts 'Hello!'
+  number_of_greetings -= 1
 end
+end
+number_of_greetings = 2
+
+greeting(number_of_greetings)
